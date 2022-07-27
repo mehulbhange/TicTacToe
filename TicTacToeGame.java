@@ -14,7 +14,7 @@ public class TicTacToeGame {
         for(int i=0;i<10;i++){
             board[i] = ' ';
         }
-
+        userVar = getUserChoice();
         if(userVar == 'x'){
             computerVar = 'o';
         }else{
