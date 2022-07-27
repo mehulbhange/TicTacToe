@@ -1,6 +1,6 @@
 package com.bridgelabz.tictactoe;
 
-import java.util.Locale;
+
 import java.util.Scanner;
 
 public class TicTacToeGame {
@@ -17,6 +17,8 @@ public class TicTacToeGame {
 
         getUserChoice();
 
+
+
     }
 
     public static void getUserChoice(){
@@ -27,5 +29,18 @@ public class TicTacToeGame {
         }else{
             computerVar = 'x';
         }
+    }
+
+    /*
+    * UC3
+    * showBoard
+    * */
+    private static void showBoard()
+    {
+        System.out.println(board[1] + " | " + board[2] + " | " + board[3]);
+        System.out.println("----------");
+        System.out.println(board[4] + " | " + board[5] + " | " + board[6]);
+        System.out.println("----------");
+        System.out.println(board[7] + " | " + board[8] + " | " + board[9]);
     }
 }
