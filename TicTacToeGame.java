@@ -91,6 +91,41 @@ public class TicTacToeGame {
 
     }
 
+    /*
+     * UC7
+     * check for winner
+     */
+    public static void winner(){
+        if ((board[1] == userVar && board[2] == userVar && board[3] == userVar) ||
+                (board[4] == userVar && board[5] == userVar && board[6] == userVar) ||
+                (board[7] == userVar && board[8] == userVar && board[9] == userVar) ||
+                (board[1] == userVar && board[5] == userVar && board[9] == userVar) ||
+                (board[3] == userVar && board[5] == userVar && board[7] == userVar) ||
+                (board[1] == userVar && board[4] == userVar && board[7] == userVar) ||
+                (board[3] == userVar && board[6] == userVar && board[9] == userVar) ||
+                (board[2] == userVar && board[5] == userVar && board[8] == userVar))
+        {
+            showBoard();
+            System.out.println("Player won the game");
+            gameOver = true;
+        }else if ((board[1] == computerVar && board[2] == computerVar && board[3] == computerVar) ||
+                (board[4] == computerVar && board[5] == computerVar && board[6] == computerVar) ||
+                (board[7] == computerVar && board[8] == computerVar && board[9] == computerVar) ||
+                (board[1] == computerVar && board[5] == computerVar && board[9] == computerVar) ||
+                (board[3] == computerVar && board[5] == computerVar && board[7] == computerVar) ||
+                (board[1] == computerVar && board[4] == computerVar && board[7] == computerVar) ||
+                (board[3] == computerVar && board[6] == computerVar && board[9] == computerVar) ||
+                (board[2] == computerVar && board[5] == computerVar && board[8] == computerVar))
+        {
+            showBoard();
+            System.out.println("Computer won the game");
+            gameOver = true;
+        }else if(numberOfFreeSpaces == 0){
+            System.out.println("Game Tie");
+            gameOver = true;
+        }
+    }
+
 
 
 
