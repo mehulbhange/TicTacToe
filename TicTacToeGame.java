@@ -69,7 +69,8 @@ public class TicTacToeGame {
                 System.out.println(playerPosition + " occupied choose other position :");
                 if(turn == userVar)
                     makePlayerMove();
-
+                else
+                    makeComputerMove();
             }
         }else{
             System.out.println("There is no free space on board! Exiting game.");
@@ -124,6 +125,17 @@ public class TicTacToeGame {
             System.out.println("Game Tie");
             gameOver = true;
         }
+    }
+    /*
+     * UC8
+     * make computer move
+     */
+    public static void makeComputerMove(){
+        int computerePosition = (int) Math.floor(Math.random() * 10) % 9 + 1;
+        checkFreeSpace(computerePosition, computerVar);
+
+        System.out.println("computer move :" + computerePosition);
+
     }
 
 
