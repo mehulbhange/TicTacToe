@@ -13,14 +13,23 @@ public class TicTacToeGame {
 
     public static void main(String[] args) {
         System.out.println("Tic tac toe");
-        for(int i=0;i<10;i++){
-            board[i] = ' ';
-        }
+
+        createEmptyBoard();
 
         getUserChoice();
 
 
 
+    }
+
+    /*
+     * UC1
+     * create a empty board
+     */
+    public static void createEmptyBoard(){
+        for(int i=1;i<10;i++){
+            board[i] = ' ';
+        }
     }
 
     public static void getUserChoice(){
@@ -84,10 +93,10 @@ public class TicTacToeGame {
      */
     public static String doToss(){
         int coin = (int) Math.floor(Math.random()*10) % 2;
-        if(coin < 5){
+        if(coin == 0){
             return "tails";
         }else{
-            return "heads";
+            return "head";
         }
 
     }
