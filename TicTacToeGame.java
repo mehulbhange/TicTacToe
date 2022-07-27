@@ -35,7 +35,7 @@ public class TicTacToeGame {
     * UC3
     * showBoard
     * */
-    private static void showBoard()
+    public static void showBoard()
     {
         System.out.println(board[1] + " | " + board[2] + " | " + board[3]);
         System.out.println("----------");
@@ -43,4 +43,19 @@ public class TicTacToeGame {
         System.out.println("----------");
         System.out.println(board[7] + " | " + board[8] + " | " + board[9]);
     }
+    /*
+     * UC4
+     * get input from user to make a move
+     * */
+    public static void makePlayerMove(){
+        System.out.println("Choose your location (1-9): ");
+        int playerPosition = sc.nextInt();
+
+
+        System.out.println("Players move  : "+playerPosition);
+    }
+
+
+
+
 }
