@@ -14,18 +14,18 @@ public class TicTacToeGame {
         for(int i=0;i<10;i++){
             board[i] = ' ';
         }
-        userVar = getUserChoice();
+
+        getUserChoice();
+
+    }
+
+    public static void getUserChoice(){
+        System.out.println("Enter your choice X or O :");
+        userVar = sc.next().toLowerCase().charAt(0);
         if(userVar == 'x'){
             computerVar = 'o';
         }else{
             computerVar = 'x';
         }
-
-    }
-
-    public static char getUserChoice(){
-        System.out.println("Enter your choice X or O :");
-        char input = sc.next().toLowerCase().charAt(0);
-        return input;
     }
 }
