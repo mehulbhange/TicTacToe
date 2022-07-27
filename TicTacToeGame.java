@@ -69,12 +69,26 @@ public class TicTacToeGame {
                 System.out.println(playerPosition + " occupied choose other position :");
                 if(turn == userVar)
                     makePlayerMove();
-                
+
             }
         }else{
             System.out.println("There is no free space on board! Exiting game.");
             gameOver = true;
         }
+    }
+
+    /*
+     * UC6
+     * check how plays first
+     */
+    public static String doToss(){
+        int coin = (int) Math.floor(Math.random()*10) % 2;
+        if(coin < 5){
+            return "tails";
+        }else{
+            return "heads";
+        }
+
     }
 
 
