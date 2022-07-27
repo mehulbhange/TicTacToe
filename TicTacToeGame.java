@@ -8,6 +8,8 @@ public class TicTacToeGame {
     static Scanner sc = new Scanner(System.in);
     static char computerVar;
     static char userVar;
+    static int numberOfFreeSpaces = 9;
+    static boolean gameOver = false;
 
     public static void main(String[] args) {
         System.out.println("Tic tac toe");
@@ -51,9 +53,30 @@ public class TicTacToeGame {
         System.out.println("Choose your location (1-9): ");
         int playerPosition = sc.nextInt();
 
-
+        checkFreeSpace(playerPosition, userVar);
         System.out.println("Players move  : "+playerPosition);
     }
+    /*
+     * UC5
+     * check for free space
+     */
+    public static void checkFreeSpace(int playerPosition, char turn){
+        if( numberOfFreeSpaces > 0){
+            if(board[playerPosition] == ' '){
+                board[playerPosition] = turn;
+                numberOfFreeSpaces--;
+            }else{
+                System.out.println(playerPosition + " occupied choose other position :");
+                if(turn == userVar)
+                    makePlayerMove();
+                
+            }
+        }else{
+            System.out.println("There is no free space on board! Exiting game.");
+            gameOver = true;
+        }
+    }
+
 
 
 
